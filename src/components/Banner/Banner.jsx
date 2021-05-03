@@ -1,5 +1,6 @@
-import axios from '../../api/axios';
 import React, { useEffect, useState } from 'react';
+import env from 'react-dotenv';
+import axios from '../../api/axios';
 import { truncate } from '../../utils/stringUtils';
 import requests from '../../api/endpoints';
 import './Banner.styles.css';
@@ -26,13 +27,17 @@ const Banner = () => {
 		<header
 			className='banner'
 			style={{
-				backgroundSize: 'contain',
-				backgroundImage: `url("https://image.tmdb.org/t/p/original/${bannerMovie?.backdrop_path}")`,
-				backgroundPosition: 'center center'
+				backgroundSize: 'cover',
+				backgroundImage: `url("${env.TMDB_IMAGE_BASE_URL}${bannerMovie?.backdrop_path}")`,
+				backgroundPosition: 'center top'
 			}}
 		>
 			<div className='banner__container'>
-				<h1 className='banner__title'>{bannerMovie?.title || bannerMovie?.name || bannerMovie?.original_name}</h1>
+				<h1 className='banner__title'>
+					{bannerMovie?.title ||
+						bannerMovie?.name ||
+						bannerMovie?.original_name}
+				</h1>
 				<div className='banner__buttons'>
 					<button className='banner__button'>Play</button>
 					<button className='banner__button'>My List</button>
