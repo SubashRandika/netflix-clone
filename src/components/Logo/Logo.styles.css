@@ -1,11 +1,11 @@
 .logo {
+	padding-top: 0.5rem;
 	fill: #e50914;
 	line-height: normal;
 	cursor: pointer;
 }
 
 .logo__netflix {
-	padding-top: 0.5rem;
 	height: 2.8125rem;
 	width: 10.4375rem;
 }
