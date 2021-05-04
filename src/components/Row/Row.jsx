@@ -41,7 +41,12 @@ const Row = ({ title, fetchUrl, isLargeRow = false }) => {
 	return (
 		<div className='row'>
 			<h2>{title}</h2>
-			<Carousel className='row__posters' responsive={responsive}>
+			<Carousel
+				className='row__posters'
+				responsive={responsive}
+				draggable={true}
+				keyBoardControl={false}
+			>
 				{movies.map(
 					(movie) =>
 						((isLargeRow && movie?.poster_path) ||
