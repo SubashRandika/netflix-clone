@@ -8,6 +8,8 @@
 	overflow-y: hidden;
 	overflow-x: scroll;
 	padding: 1.25rem;
+	scrollbar-width: none;
+	scrollbar-color: #979797 #111111;
 }
 
 .row__posters::-webkit-scrollbar {

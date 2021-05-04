@@ -7,3 +7,13 @@
 body {
 	font-family: 'Helvetica', sans-serif;
 }
+
+body::-webkit-scrollbar {
+	width: 0.5em;
+	background: #111111;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: #979797;
+	outline: 1px solid #7e7e7e;
+}

@@ -1,4 +1,4 @@
-import env from "react-dotenv";
+import env from 'react-dotenv';
 
 const API_KEY = env.TMDB_API_KEY;
 const LANGUAGE_LOCALE = 'en-US';
